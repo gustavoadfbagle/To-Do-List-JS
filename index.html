@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List JS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <div class="toDo_container">
+        <header>
+            <h1>To Do List JS <i class="fa-solid fa-list"></i></h1>
+        </header>
+        <form id="toDo_form">
+            <p>Adicione a sua tarefa:</p>
+            <div class="form-control">
+                <input type="text" id="toDo_input">
+                <button type="submit"><i class="fa-thin fa-plus"></i></button>
+            </div>
+        </form>
+
+        <form id="edit_form" class="hidden">
+            <p>Edite a sua tarefa:</p>
+            <div class="form-control">
+                <input type="text" id="edit_input">
+                <button type="submit"><i class="fa-solid fa-check-double"></i></button>
+            </div>
+            <button id="cancel_edit_btn">Cancelar</button>
+        </form>
+
+        <div id="toolbar">
+            <div id="search">
+                <h4>Pesquisar por:</h4>
+                <form>
+                    <input type="text" id="search_input">
+                    <button id="erase_button"><i class="fa-solid fa-delete-left"></i></button>
+                </form>
+            </div>
+
+            <div id="filter">
+                <h4>Filtrar por: </h4>
+                <select id="filter_select">
+                    <option value="todos">TODOS</option>
+                    <option value="finalizados">FINALIZADOS</option>
+                    <option value="pendente">PENDENTES</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="toDo_list">
+            <div class="toDo finalizado">
+                <h3>Estou fazendo alguma coisa...</h3>
+                <button class="finish-toDo"><i class="fa-solid fa-check"></i></button>
+                <button class="edit-toDo"><i class="fa-solid fa-pen"></i></button>
+                <button class="remove-toDo"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
